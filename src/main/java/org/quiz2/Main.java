@@ -86,7 +86,6 @@ class TrafficLightConnection {
 
 
 // Part 3
-
 interface DrivingBehavior {
     void showBehavior(TrafficLightConnection trafficLightStatus);
 }
@@ -94,13 +93,13 @@ interface DrivingBehavior {
 class Aggressive implements DrivingBehavior {
     @Override
     public void showBehavior(TrafficLightConnection trafficLightStatus) {
-        if (Objects.equals(trafficLightStatus.getStatus(), "Yellow")) {
+        if (trafficLightStatus.getStatus() == "Yellow") {
             System.out.println("Faster");
         }
-        else if (Objects.equals(trafficLightStatus.getStatus(), "Red")) {
+        else if (trafficLightStatus.getStatus() == "Red") {
             System.out.println("Slam Brake");
         }
-        else if (Objects.equals(trafficLightStatus.getStatus(), "Green")) {
+        else if (trafficLightStatus.getStatus() == "Green") {
             System.out.println("Need4Speed");
         }
     }
@@ -109,13 +108,13 @@ class Aggressive implements DrivingBehavior {
 class Normal implements DrivingBehavior {
     @Override
     public void showBehavior(TrafficLightConnection trafficLightStatus) {
-        if (Objects.equals(trafficLightStatus.getStatus(), "Yellow")) {
+        if (trafficLightStatus.getStatus() == "Yellow") {
             System.out.println("Slow");
         }
-        else if (Objects.equals(trafficLightStatus.getStatus(), "Red")) {
+        else if (trafficLightStatus.getStatus() == "Red") {
             System.out.println("Stop");
         }
-        else if (Objects.equals(trafficLightStatus.getStatus(), "Green")) {
+        else if (trafficLightStatus.getStatus() ==  "Green") {
             System.out.println("Go");
         }
     }
@@ -124,13 +123,13 @@ class Normal implements DrivingBehavior {
 class Passive implements DrivingBehavior {
     @Override
     public void showBehavior(TrafficLightConnection trafficLightStatus) {
-        if (Objects.equals(trafficLightStatus.getStatus(), "Yellow")) {
+        if (trafficLightStatus.getStatus() ==  "Yellow") {
             System.out.println("Slower");
         }
-        else if (Objects.equals(trafficLightStatus.getStatus(), "Red")) {
+        else if (trafficLightStatus.getStatus() ==  "Red") {
             System.out.println("Stop");
         }
-        else if (Objects.equals(trafficLightStatus.getStatus(), "Green")) {
+        else if (trafficLightStatus.getStatus() ==  "Green") {
             System.out.println("Go Slow");
         }
     }
